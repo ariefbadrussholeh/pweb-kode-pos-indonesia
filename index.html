@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Kode Pos Indonesia</title>
+  </head>
+  <body>
+    <nav>
+      <img class="flag" width="100" alt="Flag of Indonesia" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Indonesia.svg/512px-Flag_of_Indonesia.svg.png" />
+      <h1>Kode Pos Indonesia</h1>
+    </nav>
+    <main>
+      <section id="content">
+        <p>Cari kode pos di wilayah Indonesia dengan memasukkan beberapa kata kunci pencarian di bawah ini.</p>
+        <label for="provinsi">Provinsi</label>
+        <select name="provinsi" id="provinsi" onchange="showKabupaten()"></select>
+        <label for="kabupaten">Kabupaten</label>
+        <select name="kabupaten" id="kabupaten" onchange="showKecamatan()"></select>
+        <label for="kecamatan">Kecamatan</label>
+        <select name="kecamatan" id="kecamatan" onchange="showKelurahan()"></select>
+        <label for="kelurahan">Kelurahan</label>
+        <select name="kelurahan" id="kelurahan""></select>
+        <button id="button" onclick="showKodePos()">Kode Pos</button>
+      </section>
+      <section id="result" class="hidden">
+        <h2>Hasil Pencarian</h2>
+        <p>Berikut adalah hasil pencarian kode pos berdasarkan kata kunci yang telah dimasukkan.</p>
+        <div class="result-content">
+            <div id="result-title">
+                Keputih
+            </div>
+            <div id="result-desc">
+                Kode pos <span id="result-kode-pos">60111</span> untuk daerah <span id="result-kelurahan">Pademawu</span>, Kecamatan <span id="result-kecamatan">Padewau Timur</span>, <span id="result-kabupaten">KAB. Pamekasan</span>, <span id="result-provinsi">JAWA TIMUR</span>
+            </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>All rights reserved. &copy; by <a href="https://www.linkedin.com/in/arief-badrus-sholeh/">Arief Badrus Sholeh</a></p>
+    </footer>
+
+    <!-- Javascript -->
+    <script src="main.js"></script>
+  </body>
+</html>
